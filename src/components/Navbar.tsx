@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { siteConfig } from "@/app/config";
+import Logo from "./Logo";
 
 const links = [
   { href: "#work", label: "Work" },
@@ -31,11 +32,14 @@ export default function Navbar() {
             : "my-0 border-b border-transparent py-5"
         }`}
       >
-        <a href="#top" className="flex items-center gap-2 text-sm font-medium">
-          <span className="font-display text-lg font-semibold">
+        <a
+          href="#top"
+          className="flex items-center gap-2.5 text-sm font-medium"
+        >
+          <Logo className="h-8 w-8 text-foreground" />
+          <span className="font-semibold tracking-tight">
             {siteConfig.name}
           </span>
-          <span className="h-1.5 w-1.5 rounded-full bg-accent" />
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">

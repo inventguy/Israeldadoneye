@@ -1,4 +1,5 @@
 import { siteConfig } from "@/app/config";
+import Logo from "./Logo";
 
 const socialLabels: Record<string, string> = {
   upwork: "Upwork",
@@ -19,9 +20,12 @@ export default function Footer() {
           <div>
             <a
               href="#top"
-              className="font-display text-2xl font-semibold tracking-tight transition-colors hover:text-muted"
+              className="inline-flex items-center gap-3 transition-colors hover:text-muted"
             >
-              {siteConfig.name}.
+              <Logo className="h-9 w-9 text-foreground" />
+              <span className="font-display text-2xl font-semibold tracking-tight">
+                {siteConfig.name}.
+              </span>
             </a>
             <p className="mt-2 max-w-xs text-sm text-muted">
               {siteConfig.role}. {siteConfig.location}.
